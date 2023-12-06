@@ -2,6 +2,7 @@
 #Written by Juan Pablo Orjuela (jporjuelam@gmail.com)
 #Started 23 May 2022
 #Revisited and updated 25 Nov 2023
+#All personal data has been modified - locations are not true locations
 ############################
 
 library(sp)
@@ -39,8 +40,8 @@ CDI <- data.frame(name=c("Pedregal","CerroLuces","SantaMaria","Naranjos","PequeG
 
 #Create profile definition - this needs updating of activities and locations 
 FixedActivities <- data.frame(Place_type=c("CDI","home","CDI","home","home2"),
-                              Lon=c(-75.61221,-75.609534,-75.61221,-75.609534,-75.608934),
-                              Lat=c(6.168112,6.191594,6.168112,6.191594,6.1911),
+                              Lon=c(-75.61,-75.60,-75.61,-75.60,-75.60),
+                              Lat=c(6.16,6.19,6.16,6.19,6.19),
                               Start_trip_time=c("8:20","12:45","16:20","18:00",NA), #time to leave this place, NA for last trip of the day
                               End_trip_time=c(NA,"12:00","16:00","17:00","19:00"),#time to arrive to this place, NA for first trip of the day
                               DayWeek = c(1,1,1,1,1)) 
@@ -62,8 +63,8 @@ FlexibleActivities <- data.frame(key=c("work","work","work","work","work"), #in 
 ClientList <- data.frame(key=c("work","work","work","work","work"),
                          value=c("client","client","client","client","client"),
                          name=c("Itagui","Sabaneta","Envigado","Calatrava","LosGomez"),
-                         Lon=c(-75.609123,-75.615303,-75.586889,-75.611721,-75.610557),
-                         Lat=c(6.173099,6.152001,6.169286,6.181267,6.190462))
+                         Lon=c(-75.60,-75.61,-75.58,-75.61,-75.61),
+                         Lat=c(6.17,6.15,6.16,6.18,6.19))
 
 Results <- vector(mode='list',length=2)
 d <- 1
